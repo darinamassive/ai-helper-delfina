@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.panel {
+  width: 260px;
+  padding: 14px 14px 12px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rate {
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#rate-slider {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  accent-color: #2563eb;
+}
+
+#reset {
+  flex-shrink: 0;
+  height: 28px;
+  min-width: 40px;
+  padding: 0 8px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: #f8fafc;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#reset:hover:not(:disabled) {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+#reset:disabled,
+#rate-slider:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.status {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #667085;
+}
+
+.status.error {
+  color: #b42318;
+}
